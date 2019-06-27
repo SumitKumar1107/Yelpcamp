@@ -14,12 +14,18 @@ var express     = require("express"),
 //mongoose.connect("mongodb://localhost/yelp_camp");
 //mongoose.connect("mongodb+srv://sumit123:Sumit123@yelpcamp-nmzgh.mongodb.net/test?retryWrites=true&w=majorit");
 //mongodb+srv://sumit123:<password>@yelpcamp-nmzgh.mongodb.net/test?retryWrites=true&w=majority
-var MongoClient = require("mongodb").MongoClient;
+const  MongoClient = require("mongodb").MongoClient;
 
-var uri = "mongodb://sumit123:Sumit123@yelpcamp-nmzgh.mongodb.net/test?retryWrites=true&w=majority";
-MongoClient.connect(uri, function(err,db){
-    db.close();
+const uri = "mongodb+srv://sumit123:Sumit123@yelpcamp-nmzgh.mongodb.net/test?retryWrites=true&w=majority"
+MongoClient.connect(uri,function(err,client){
+    if(err)
+    {
+        console.log(err);
+    }
+    const collection = client.db("test").collection("devices");
+    client.close();
 });
+
 
 
 
