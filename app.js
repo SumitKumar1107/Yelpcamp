@@ -12,8 +12,10 @@ var express     = require("express"),
     seedDB      = require("./seeds")
     
 //mongoose.connect("mongodb://localhost/yelp_camp");
-mongoose.connect("mongodb://sumit:sumit123@ds127391.mlab.com:27391/heroku_74pcc9sf");
-//mongodb://sumit:sumit123@ds127391.mlab.com:27391/heroku_74pcc9sf
+mongoose.connect("process.env.DATABASEURL");
+//mongoose.connect("mongodb://sumit:sumit123@ds127391.mlab.com:27391/heroku_74pcc9sf");
+
+
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
