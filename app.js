@@ -12,22 +12,8 @@ var express     = require("express"),
     seedDB      = require("./seeds")
     
 //mongoose.connect("mongodb://localhost/yelp_camp");
-//mongoose.connect("mongodb+srv://sumit123:Sumit123@yelpcamp-nmzgh.mongodb.net/test?retryWrites=true&w=majorit");
-//mongodb+srv://sumit123:<password>@yelpcamp-nmzgh.mongodb.net/test?retryWrites=true&w=majority
-const  MongoClient = require("mongodb").MongoClient;
-
-const uri = "mongodb+srv://sumit123:Sumit123@yelpcamp-nmzgh.mongodb.net/test?retryWrites=true&w=majority"
-MongoClient.connect(uri,function(err,client){
-    if(err)
-    {
-        console.log(err);
-    }
-    const collection = client.db("test").collection("devices");
-    client.close();
-});
-
-
-
+mongoose.connect("mongodb://sumit:sumit123@ds127391.mlab.com:27391/heroku_74pcc9sf");
+//mongodb://sumit:sumit123@ds127391.mlab.com:27391/heroku_74pcc9sf
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
