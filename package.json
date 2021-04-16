@@ -12,7 +12,7 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "connect-flash": "^0.1.1",
-    "lodash": ">=4.17.19",
+    "lodash": ">=4.17.11",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "express-session": "^1.16.2",
@@ -22,6 +22,6 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^5.0.1",
-    "mquery": ">=3.2.3"
+    "mquery": ">=3.2.1"
   }
 }
